@@ -1,4 +1,4 @@
-const userService = require('../services/user.service.js');
+import userService from '../services/user.service.js';
 
 const getAll = async (req, res, next) => {
     try {

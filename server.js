@@ -1,7 +1,8 @@
-const app = require('./src/app.js');
-const connectMongo = require('./src/config/mongodb.js');
-const connectPostgres = require('./src/config/postgres.js');
-require('dotenv').config();
+import app from './src/app.js';
+import connectMongo from './src/config/mongodb.js';
+import pool from './src/config/postgres.js';
+import 'dotenv/config';
+
 
 const PORT = process.env.PORT || 4001;
 
@@ -10,7 +11,7 @@ const startServer = async () => {
         await connectMongo();
         console.log('✅ MongoDB conectado');
 
-        await connectPostgres();
+        await pool.connect();
         console.log('✅ PostgreSQL conectado');
 
         app.listen(PORT, () => {

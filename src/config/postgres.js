@@ -1,14 +1,21 @@
-const { Pool } = require('pg');
-require('dotenv').config();
+import { Pool } from 'pg';
+import dotenv from 'dotenv';
 
-const env = require('./env.js');
+import env from './env.js';
 
+// Postgres Local
+// const pool = new Pool({
+//     host: env.postgres.host,
+//     port: env.postgres.port,
+//     user: env.postgres.user,
+//     password: env.postgres.password,
+//     database: env.postgres.database,
+// });
+
+// Supabase
 const pool = new Pool({
-    host: env.postgres.host,
-    port: env.postgres.port,
-    user: env.postgres.user,
-    password: env.postgres.password,
-    database: env.postgres.database,
+    connectionString: env.supabase.databaseUrl,
+    ssl: { rejectUnauthorized: false },
 });
 
 const testConnection = async () => {

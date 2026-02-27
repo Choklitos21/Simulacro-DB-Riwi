@@ -1,9 +1,8 @@
-const express = require('express');
-const cors = require('cors');
-const errorMiddleware = require('./middlewares/error.middleware.js');
-
-const authRoutes = require('./routes/auth.routes.js');
-const userRoutes = require('./routes/user.routes.js');
+import express from "express";
+import cors from "cors";
+import errorMiddleware from './middlewares/error.middleware.js';
+import authRoutes from './routes/auth.routes.js';
+import userRoutes from './routes/user.routes.js';
 
 const app = express();
 

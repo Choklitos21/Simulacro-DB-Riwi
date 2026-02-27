@@ -1,4 +1,4 @@
-require('dotenv').config();
+import 'dotenv/config';
 
 const env = {
     // Servidor
@@ -12,6 +12,10 @@ const env = {
         user: process.env.PG_USER,
         password: process.env.PG_PASSWORD,
         database: process.env.PG_DATABASE,
+    },
+
+    supabase: {
+        databaseUrl: process.env.DATABASE_URL
     },
 
     // MongoDB

@@ -1,5 +1,5 @@
-const jwt = require('jsonwebtoken');
-const env = require('../config/env.js');
+import jwt from 'jsonwebtoken';
+import env from '../config/env.js';
 
 const authMiddleware = (req, res, next) => {
     try {

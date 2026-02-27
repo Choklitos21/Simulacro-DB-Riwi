@@ -1,4 +1,4 @@
-const { pool } = require('../config/postgres.js');
+import pool from '../config/postgres.js';
 
 const getAll = async () => {
     const { rows } = await pool.query(

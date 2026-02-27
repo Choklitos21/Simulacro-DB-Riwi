@@ -1,7 +1,8 @@
-const express = require('express');
-const router = express.Router();
-const authController = require('../controllers/auth.controller.js');
-const authMiddleware = require('../middlewares/auth.middleware.js');
+import { Router } from "express";
+import authController from '../controllers/auth.controller.js';
+import authMiddleware from '../middlewares/auth.middleware.js';
+
+const router = Router();
 
 // Públicas
 router.post('/register', authController.register);

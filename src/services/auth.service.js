@@ -1,7 +1,7 @@
-const bcrypt = require('bcryptjs');
-const jwt = require('jsonwebtoken');
-const { pool } = require('../config/postgres.js');
-const env = require('../config/env.js');
+import bcrypt from 'bcryptjs';
+import jwt from 'jsonwebtoken';
+import pool from '../config/postgres.js';
+import env from '../config/env.js';
 
 const register = async ({ name, email, password }) => {
     const { rows } = await pool.query(

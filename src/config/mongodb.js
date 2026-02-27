@@ -1,5 +1,5 @@
-const mongoose = require('mongoose');
-const env = require('./env.js');
+import mongoose from 'mongoose';
+import env from './env.js';
 
 const connectMongo = async () => {
     try {
@@ -19,4 +19,4 @@ const connectMongo = async () => {
     }
 };
 
-export default connectMongo()
+export default connectMongo
