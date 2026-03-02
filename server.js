@@ -25,3 +25,7 @@ const startServer = async () => {
 };
 
 startServer();
+
+// ALTER TABLE nombre_de_tu_tabla
+ADD COLUMN id UUID DEFAULT gen_random_uuid() PRIMARY KEY;
+
